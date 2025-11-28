@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAX AI</title>
+<title>SOLIMAN AI</title>
 
 <style>
     body {
@@ -14,73 +14,152 @@
         overflow-x: hidden;
     }
 
+    /* خلفية روبوتات شفافة */
     body::before {
         content: "";
         position: fixed;
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background: url('https://i.ibb.co/VjPQtXG/metal-dark-texture.jpg') center/cover no-repeat;
-        opacity: 0.25;
+        background: url("https://i.ibb.co/QN5zKwM/futuristic-robot.jpg") center/cover no-repeat;
+        opacity: 0.18;
         z-index: -1;
+        filter: brightness(0.8);
     }
 
-    header {
-        width: 100%;
-        padding: 25px 40px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        background: rgba(0,0,0,0.6);
-        border-bottom: 2px solid #d4af37;
-        backdrop-filter: blur(6px);
-    }
-
-    .logo {
-        font-size: 32px;
-        font-weight: bold;
-        color: #d4af37;
-        text-shadow: 0 0 12px #d4af37;
-        font-family: "Times New Roman", serif;
-    }
-
+    /* العنوان الرئيسي */
     .hero {
         text-align: center;
-        margin-top: 160px;
+        padding: 120px 20px;
+        animation: fadeIn 2.5s ease;
     }
 
     .hero h1 {
-        font-size: 55px;
+        font-size: 50px;
+        margin-bottom: 20px;
         color: #d4af37;
         text-shadow: 0 0 15px #d4af37;
     }
 
-    .robot {
-        width: 260px;
-        margin-top: 40px;
-        filter: drop-shadow(0 0 25px #d4af37);
-        animation: float 3s infinite ease-in-out;
+    .hero p {
+        font-size: 22px;
+        opacity: 0.9;
+        margin-bottom: 40px;
     }
 
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-18px); }
-        100% { transform: translateY(0); }
+    .button {
+        padding: 14px 40px;
+        font-size: 20px;
+        border: 2px solid #d4af37;
+        color: #d4af37;
+        background: transparent;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        background: #d4af37;
+        color: #000;
+        transform: scale(1.05);
+    }
+
+    /* قسم الخدمات */
+    .section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #d4af37;
+        text-shadow: 0 0 10px #d4af37;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid #d4af37;
+        padding: 25px;
+        border-radius: 12px;
+        transition: 0.4s;
+        backdrop-filter: blur(4px);
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px #d4af37;
+    }
+
+    .card h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    /* فوتر */
+    footer {
+        text-align: center;
+        padding: 30px;
+        margin-top: 30px;
+        border-top: 1px solid #d4af37;
+        opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">M A X</div>
-</header>
+<!-- قسم الهيرو -->
+<div class="hero">
+    <h1>منصة SOLIMAN AI</h1>
+    <p>أدوات الذكاء الاصطناعي المتقدمة – تصميم – تحليل – روبوتات – مستقبل التقنية بين يديك.</p>
+    <button class="button">ابدأ الآن</button>
+</div>
 
-<section class="hero">
-    <h1>مستقبل الذكاء الاصطناعي يبدأ من هنا</h1>
+<!-- قسم الخدمات -->
+<div class="section">
+    <h2>الخدمات المتاحة</h2>
 
-    <img class="robot" src="https://i.ibb.co/mGntw8n/ai-robot-gold.png">
-</section>
+    <div class="cards">
+        <div class="card">
+            <h3>تصميم بالذكاء الاصطناعي</h3>
+            <p>إنشاء صور وتصميمات مستقبلية بأسلوب فاخر.</p>
+        </div>
+
+        <div class="card">
+            <h3>روبوت محادثة</h3>
+            <p>مساعد ذكي يرد على كل استفساراتك.</p>
+        </div>
+
+        <div class="card">
+            <h3>تحسين الصور</h3>
+            <p>رفع الجودة – توضيح – تلوين – 3D.</p>
+        </div>
+
+        <div class="card">
+            <h3>إنشاء محتوى</h3>
+            <p>كتابة مقالات – نصوص – سكربتات – محتوى إبداعي.</p>
+        </div>
+    </div>
+</div>
+
+<!-- الفوتر -->
+<footer>
+    © 2025 SOLIMAN AI — جميع الحقوق محفوظة
+</footer>
 
 </body>
 </html>
