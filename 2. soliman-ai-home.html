@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Soliman Ai — منصة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000;
+    --gold:#d4af37;
+    --gold-dark:#b88f2b;
+    --glass: rgba(255,255,255,0.02);
+  }
+  html,body{height:100%;margin:0;font-family:'Cairo',sans-serif;background:linear-gradient(180deg,#000 0%, #080808 60%);color:var(--gold);-webkit-font-smoothing:antialiased}
+  /* header */
+  header{position:fixed;top:0;left:0;right:0;height:72px;display:flex;align-items:center;justify-content:flex-end;padding:14px 28px;z-index:30;background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.0));backdrop-filter: blur(4px)}
+  .logo{font-weight:800;font-size:26px;color:var(--gold);text-shadow:0 6px 18px rgba(212,175,55,0.12);margin-left:12px}
+  .logo small{display:block;font-weight:400;font-size:12px;color:rgba(212,175,55,0.9);opacity:0.85}
+  /* hero */
+  main{padding-top:100px;max-width:980px;margin:0 auto}
+  .hero{padding:60px 24px;text-align:center}
+  .title{font-size:44px;letter-spacing:2px;font-weight:800;color:var(--gold);text-shadow:0 8px 30px rgba(212,175,55,0.25)}
+  .subtitle{margin-top:12px;font-size:18px;color:rgba(212,175,55,0.9)}
+  .cta{display:inline-block;margin-top:26px;padding:14px 28px;border-radius:12px;border:2px solid var(--gold);background:transparent;color:var(--gold);font-weight:700;cursor:pointer;transition:all .18s;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+  .cta:hover{transform:translateY(-4px);box-shadow:0 18px 60px rgba(212,175,55,0.08)}
+  /* sections */
+  section{padding:46px 18px;border-top:1px solid rgba(255,255,255,0.02)}
+  h2{font-size:36px;color:var(--gold);text-align:center;margin:20px 0 10px}
+  p.lead{max-width:820px;margin:8px auto;color:rgba(212,175,55,0.85);text-align:center}
+  /* cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:980px;margin:20px auto}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));padding:18px;border-radius:14px;border:1px solid rgba(212,175,55,0.06);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+  .card h3{margin:6px 0;font-size:20px;color:var(--gold)}
+  .card p{color:rgba(212,175,55,0.8);font-size:14px}
+  /* chat */
+  .chatbox{display:flex;flex-direction:column;height:420px}
+  .messages{flex:1;overflow:auto;padding:12px;margin-bottom:10px;background:linear-gradient(180deg,transparent,rgba(255,255,255,0.01));border-radius:10px}
+  .msg{margin:8px 0;padding:10px;border-radius:10px;max-width:78%}
+  .msg.user{background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));margin-left:auto;text-align:right}
+  .msg.ai{background:linear-gradient(90deg, rgba(212,175,55,0.06), rgba(212,175,55,0.03));text-align:left}
+  .chat-input{display:flex;gap:10px}
+  .chat-input textarea{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--gold);min-height:56px;resize:none}
+  .btn{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 14px;border-radius:10px;cursor:pointer}
+  /* image preview */
+  .preview{width:100%;height:220px;border-radius:12px;background:linear-gradient(180deg,#0a0a0a,#070707);display:flex;align-items:center;justify-content:center;color:rgba(212,175,55,0.2);font-size:14px}
+  /* footer */
+  footer{padding:26px;text-align:center;color:rgba(212,175,55,0.8)}
+  /* small screen tweaks */
+  @media (max-width:520px){
+    .title{font-size:34px}
+    .logo{font-size:20px}
+  }
+  /* background subtle 3D lines */
+  .bg-lines{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.08;background-image:
+    radial-gradient(circle at 40% 20%, rgba(212,175,55,0.08) 0 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.02) 1px, transparent 1px);}
+</style>
+</head>
+<body>
+<div class="bg-lines"></div>
+<header>
+  <div style="text-align:right">
+    <div class="logo">C/ Soliman Ali <small>تصميم احترافي أسود × ذهبي</small></div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="title">منصة <br> Soliman AI</div>
+    <div class="subtitle">جيل جديد من الذكاء الاصطناعي — تصميم فاخر أسود × ذهبي</div>
+    <button class="cta" onclick="scrollToServices()">ابدأ الآن</button>
+  </div>
+
+  <section id="services">
+    <h2>الخدمات</h2>
+    <p class="lead">نماذج ذكاء اصطناعي — روبوتات محادثة — مولد صور وفيديو — وكل شيء لتجربة مجانية أولية.</p>
+
+    <div class="grid">
+      <!-- Chat card -->
+      <div class="card">
+        <h3>دردشة AI</h3>
+        <p>تجربة محادثة سريعة (وضع تجريبي). لتشغيل المحرك الحقيقي أدخل مفتاح HuggingFace أو Replicate في الكود.</p>
+        <div class="chatbox" id="chatBox">
+          <div class="messages" id="messages"></div>
+          <div class="chat-input">
+            <textarea id="chatInput" placeholder="اكتب سؤالك هنا..."></textarea>
+            <button class="btn" id="sendBtn">إرسال</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image generator card -->
+      <div class="card">
+        <h3>مولد صور</h3>
+        <p>اكتب وصفًا وسيولد لك صورة (تجريبي محلي أو عبر API عند تفعيل المفتاح).</p>
+        <input id="imgPrompt" placeholder="وصف الصورة..." style="width:100%;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--gold);margin-bottom:10px">
+        <button class="btn" id="genImgBtn">توليد صورة</button>
+        <div class="preview" id="imgPreview">صورة المعاينة ستظهر هنا</div>
+      </div>
+
+      <!-- Video / tools card -->
+      <div class="card">
+        <h3>إنشاء فيديو</h3>
+        <p>زرّان: 1) تجربة مسار خارجي (يوجه لأداة مجانية) 2) تكامل API عند تثبيت مفتاح.</p>
+        <button class="btn" onclick="openExternal('https://www.canva.com')">إنشاء فيديو (Canva)</button>
+        <button class="btn" onclick="openExternal('https://app.runwayml.com')">تجربة Runway</button>
+      </div>
+
+      <!-- About / footer card -->
+      <div class="card">
+        <h3>حول</h3>
+        <p>Soliman Ali — موقع عرضي لعرض نماذج AI وتصميمات. الحقوق محفوظة © 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Soliman Ali | All Rights — 2025 ©
+  </footer>
+</main>
+
+<script>
+/* ============== إعدادات (ضع المفتاح هنا إن أردت - لكن لا ترفعه للعامة) ============== */
+const SETTINGS = {
+  HUGGINGFACE_API_KEY: '', // ضع هنا مفتاح Hugging Face إن وددت
+  HF_IMAGE_MODEL: 'stabilityai/stable-diffusion-2', // نموذج تجريبي
+  USE_REAL_AI: false // غيّر إلى true بعد وضع مفتاح (قد تحتاج إلى إعدادات CORS)
+};
+
+/* ============== واجهة الدردشة - تجريبي محلي (mock) ============== */
+const messagesEl = document.getElementById('messages');
+const chatInput = document.getElementById('chatInput');
+document.getElementById('sendBtn').addEventListener('click', sendMsg);
+
+function appendMsg(text, who='ai'){
+  const d = document.createElement('div');
+  d.className = 'msg ' + (who==='user' ? 'user' : 'ai');
+  d.textContent = text;
+  messagesEl.appendChild(d);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function mockAnswer(q){
+  // إجابة بسيطة ذكية محليًا (للتجربة)
+  if(!q) return "اكتب شيئًا لأجيبك...";
+  if(q.includes('مرحبا')||q.includes('اهلا')) return 'أهلا! كيف أساعدك اليوم؟';
+  if(q.includes('صور')||q.includes('صورة')) return 'يمكنني توليد صورة لك — اكتب وصفًا مفصلاً.';
+  return 'هذا جواب تجريبي: '+ q.slice(0,80);
+}
+
+async function sendMsg(){
+  const txt = chatInput.value.trim();
+  if(!txt) return;
+  appendMsg(txt,'user');
+  chatInput.value='';
+  appendMsg('جارٍ التفكير...','ai');
+
+  // وضع افتراضي: ردّ تجريبي محلي
+  if(!SETTINGS.USE_REAL_AI || !SETTINGS.HUGGINGFACE_API_KEY){
+    // امسح آخر رسالة "جارٍ التفكير..." ثم عوّضها برد حقيقي
+    setTimeout(()=>{
+      // احذف آخر رسالة (placeholder)
+      const el = messagesEl.lastElementChild;
+      if(el && el.textContent.includes('جارٍ')) el.remove();
+      appendMsg(mockAnswer(txt),'ai');
+    },700);
+    return;
+  }
+
+  // لو فعلت USE_REAL_AI ووضعت HF key — محاولة استدعاء Hugging Face Inference
+  try {
+    const model = SETTINGS.HF_CHAT_MODEL || 'gpt2'; // مثال
+    const res = await fetch('https://api-inference.huggingface.co/models/' + model, {
+      method:'POST',
+      headers:{ Authorization: 'Bearer ' + SETTINGS.HUGGINGFACE_API_KEY, 'Content-Type':'application/json'},
+      body: JSON.stringify({inputs: txt})
+    });
+    const data = await res.json();
+    // تبسيط: نعرض النص الأوّل
+    const reply = (typeof data === 'string')? data : (data?.generated_text || JSON.stringify(data));
+    // احذف placeholder ثم اضف الرد
+    const el = messagesEl.lastElementChild;
+    if(el && el.textContent.includes('جارٍ')) el.remove();
+    appendMsg(String(reply),'ai');
+  } catch(e){
+    const el = messagesEl.lastElementChild;
+    if(el && el.textContent.includes('جارٍ')) el.remove();
+    appendMsg('خطأ في استدعاء الـAPI — الرجاء تفعيل المفتاح أو استخدام الوضع التجريبي.','ai');
+    console.error(e);
+  }
+}
+
+/* ============== توليد صورة (محلي أو عبر HF) ============== */
+document.getElementById('genImgBtn').addEventListener('click', async ()=>{
+  const prompt = document.getElementById('imgPrompt').value.trim();
+  const preview = document.getElementById('imgPreview');
+  if(!prompt){ alert('اكتب وصف الصورة أولاً'); return; }
+  preview.textContent = 'جاري التوليد...';
+  // وضع تجريبي: نقوّم صورة تركيبيّة CSS
+  if(!SETTINGS.USE_REAL_AI || !SETTINGS.HUGGINGFACE_API_KEY){
+    setTimeout(()=> {
+      preview.innerHTML = '<div style="padding:10px;text-align:center;color:var(--gold)"><svg width="180" height="120" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg"><rect rx="8" width="180" height="120" fill="#0b0b0b"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#d4af37">تجريبي: صورة</text></svg></div>';
+    },900);
+    return;
+  }
+
+  // مثال طلب إلى Hugging Face text-to-image (قد يحتاج إعدادات CORS)
+  try {
+    const resp = await fetch('https://api-inference.huggingface.co/models/' + SETTINGS.HF_IMAGE_MODEL, {
+      method:'POST',
+      headers:{ Authorization:'Bearer ' + SETTINGS.HUGGINGFACE_API_KEY, 'Content-Type':'application/json' },
+      body: JSON.stringify({ inputs: prompt })
+    });
+    // النتيجة قد تكون بايناري (image) أو JSON => نتعامل بحذر
+    const contentType = resp.headers.get('content-type') || '';
+    if(contentType.includes('application/json')){
+      const data = await resp.json();
+      if(data?.error){ preview.textContent = 'خطأ من الخادم: ' + data.error; return; }
+      // بعض النماذج تعيد base64 داخل JSON
+      const b64 = data?.image || data?.b64_json || null;
+      if(b64){ preview.innerHTML = '<img src="data:image/png;base64,'+b64+'" style="max-width:100%;border-radius:10px" />'; return; }
+      preview.textContent = 'استجابة غير متوقعة من API (انظر الكونسول)';
+      console.log(data);
+    } else {
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+      preview.innerHTML = '<img src="'+url+'" style="max-width:100%;border-radius:10px" />';
+    }
+  } catch (err){
+    preview.textContent = 'فشل التوليد — تحقق من مفتاح API أو CORS.';
+    console.error(err);
+  }
+});
+
+/* ============== أدوات مساعدة ============== */
+function openExternal(url){ window.open(url,'_blank') }
+function scrollToServices(){ document.getElementById('services').scrollIntoView({behavior:'smooth'}) }
+
+/* اختياري: رسائل ارشادية عند التحميل */
+appendMsg('مرحبًا! هذه نسخة تجريبية من شات Soliman AI. لتفعيل الذكاء الحقيقي ضع مفتاح Hugging Face في SETTINGS وغيّر USE_REAL_AI إلى true.','ai');
+
+</script>
+</body>
+  </html>
