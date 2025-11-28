@@ -3,115 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soliman AI</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background: #000;
-            color: #d4af37;
-            overflow-x: hidden;
-        }
-
-        /* خلفية مستقبلية */
-        .bg-lines {
-            position: fixed;
-            inset: 0;
-            background: linear-gradient(120deg, rgba(212,175,55,0.1) 0%, transparent 60%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* لوجو */
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            padding: 25px 40px;
-            text-align: right;
-            letter-spacing: 3px;
-            color: #d4af37;
-            text-shadow: 0 0 10px #c9a032, 0 0 20px rgba(255,215,0,0.4);
-            font-family: 'Times New Roman', serif;
-        }
-
-        header {
-            text-align: center;
-            padding: 140px 20px 80px;
-        }
-
-        header h1 {
-            font-size: 55px;
-            margin: 0;
-            color: #d4af37;
-            text-shadow: 0 0 20px rgba(212,175,55,0.8);
-        }
-
-        header p {
-            font-size: 22px;
-            margin-top: 15px;
-            color: #c8a84d;
-        }
-
-        .btn {
-            margin-top: 35px;
-            padding: 14px 35px;
-            font-size: 20px;
-            border: 2px solid #d4af37;
-            background: transparent;
-            color: #d4af37;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #d4af37;
-            color: #000;
-            box-shadow: 0 0 15px #d4af37;
-        }
-
-        /* أقسام */
-        .section {
-            padding: 100px 25px;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 40px;
-            color: #d4af37;
-            margin-bottom: 25px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 18px;
-            color: #a88527;
-        }
-    </style>
+    <title>Soliman AI Tools</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="bg-lines"></div>
-
-    <!-- لوجو -->
-    <div class="logo">Soliman Ali</div>
-
-    <!-- هيدر -->
-    <header>
-        <h1>منصة Soliman AI</h1>
-        <p>جيل جديد من الذكاء الاصطناعي — تصميم فاخر أسود × ذهبي</p>
-        <button class="btn">ابدأ الآن</button>
+    <!-- الهيدر -->
+    <header class="header">
+        <h1>منصة سليمان للذكاء الاصطناعي</h1>
+        <p>أدوات مجانية لمساعدتك في كل ما تحتاجه</p>
     </header>
 
-    <!-- خدمات -->
+    <!-- الخدمات -->
     <section class="section">
         <h2>الخدمات</h2>
-        <p>نماذج ذكاء اصطناعي – روبوتات – بوتات – مواقع – أنظمة — والمزيد</p>
+        <ul class="features">
+            <li>• شات AI مجاني</li>
+            <li>• إنشاء فيديو بالذكاء الاصطناعي</li>
+            <li>• صانع الصور</li>
+            <li>• روبوتات – مواقع – أنظمة</li>
+            <li>• المزيد قريبًا…</li>
+        </ul>
     </section>
 
-    <div class="footer">© 2025 — Soliman Ali | All Rights Reserved</div>
+    <!-- الأدوات -->
+    <section class="section">
+        <h2>الأدوات</h2>
+
+        <a class="tool" href="https://chat.openai.com" target="_blank">شات الذكاء الاصطناعي</a>
+
+        <a class="tool" href="https://app.nanobanana.ai/" target="_blank">تحويل النص إلى فيديو – Nano Banana</a>
+
+        <a class="tool" href="https://playground.com" target="_blank">أداة إنشاء الصور</a>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        © 2025 — Soliman Ali | All Rights Reserved
+    </footer>
 
 </body>
 </html>
